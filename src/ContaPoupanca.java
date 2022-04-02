@@ -1,8 +1,8 @@
-public class ContaCorrente extends Conta {
+public class ContaPoupanca extends Conta {
 
     private static int SEQUENCIAL = 1;
 
-    public ContaCorrente(Agencia agencia, Cliente cliente) {
+    public ContaPoupanca(Agencia agencia, Cliente cliente) {
         super.agencia = agencia;
         super.numero = SEQUENCIAL++;
         super.cliente = cliente;
@@ -11,7 +11,7 @@ public class ContaCorrente extends Conta {
 
     @Override
     public void imprimirExtrato() {
-        System.out.println("**** Extrato Conta Corrente ***");
+        System.out.println("**** Extrato Conta Pupança ***");
         super.imprimirInfosComuns();
     }
 
@@ -19,5 +19,5 @@ public class ContaCorrente extends Conta {
         this.sacar(valor);
         contaDestino.depositar(valor);
     }
-
 }
+
